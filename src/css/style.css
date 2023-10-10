@@ -1,0 +1,56 @@
+
+body {
+    font-family: 'Montserat';
+        font-style: normal;
+        background-color: blanchedalmond;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 0 auto;
+
+}
+
+.submit{
+    padding-left: 15px;
+}
+
+.gallery {
+    display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        
+
+}
+
+.gallery__item {
+width: calc((100% - 64px) / 4);
+
+}
+.gallery__image {
+    width: 350px;
+    object-fit: cover;
+    height: 250px;
+    
+}
+
+
+.search-form{
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+margin-top: 20px;
+
+}
+.image_description{
+    font-family: 'Montserat';
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
