@@ -9,10 +9,12 @@ const apiKey = '39901621-58ed13b7b77a8b199e2835a43';
 const BASE_URL = 'https://pixabay.com/api/';
 
 const ref = {
-    select: document.querySelector('.target-js'),      
+  select: document.querySelector('.target-js'),   
+  loadMoreButton: document.querySelector('.load-more'),
+     endMessage: document.getElementById('end-message'),
 }
 
-const { select } = ref;
+const { select,loadMoreButton,endMessage } = ref;
 
 let searchForm = document.querySelector('.search-form');
 let galleryList = document.querySelector('.gallery'); 
@@ -22,6 +24,16 @@ let image_type = 'photo';
 let currentPage = 1;
 let lightbox; 
 
+
+
+searchForm.addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const searchQuery = searchForm.elements.searchQuery.value;
+  clearGallery();
+  await loadMoreImages(searchQuery);
+});
+
+
 async function fetchImages(searchQuery) {
   try {
     const response = await axios.get(`${BASE_URL}?key=${apiKey}&q=${searchQuery}&image_type=${image_type}&orientation=${orientation}&safesearch=${safesearch}&page=${currentPage}&per_page=40`);
@@ -30,6 +42,7 @@ async function fetchImages(searchQuery) {
       Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
     } else {
       currentPage++;
+   
       return images;
     }
   } catch (error) {
@@ -85,7 +98,7 @@ const createGalleryMarkup = galleryItems => {
               class="gallery__image"
               src="${previewURL}"
               data-source="${largeImageURL}"
-            />
+             loading="lazy"/>
               <p class="image_description">${altText}</p>
           </a>
         </div>
@@ -101,3 +114,5 @@ searchForm.addEventListener('submit', async function (e) {
   const images = await fetchImages(searchQuery);
   displayImages(images);
 });
+
+

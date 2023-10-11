@@ -11,13 +11,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 15px;
     margin: 0 auto;
 
-}
-
-.submit{
-    padding-left: 15px;
 }
 
 .gallery {
@@ -32,7 +27,7 @@ body {
 .gallery__item {
 width: calc((100% - 64px) / 4);
 border: 2px rosybrown;
-position: relative;
+
 
 
 }
@@ -50,7 +45,15 @@ position: relative;
 display: flex;
 justify-content: center;
 margin-bottom: 20px;
-margin-top: 20px;
+width: 100%;
+background: rgb(167, 88, 88);
+align-items: center;
+gap: 35px;
+padding: 20px 0;
+top: 0;
+left: 0;
+box-shadow: inset 2px 2px 3px #fff, inset -3px -3px 7px #fff;
+
 
 
 }
@@ -62,11 +65,27 @@ margin-top: 20px;
 }
 
 .input{
-    width: 300px;
-        height: 40px;
-        border: none;
-        border-radius: 20px;
-        outline: none;
-        padding: 5px 5px 5px 15px;
-        font-size: 16px;
+width: 400px;
+height: 30px;
     }
+
+    .submit{
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    box-shadow: 0 0 #fff, 5px 5px 20px #e9e6dc;
+    font-family: 'Montserat';
+    color: black;
+     font-weight: 700;
+    }
+
+  .load-more {
+    display: none;
+        }
