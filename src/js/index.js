@@ -26,6 +26,7 @@ let lightbox;
 
 
 
+
 searchForm.addEventListener('submit', async function (e) {
   e.preventDefault();
   const searchQuery = searchForm.elements.searchQuery.value;
@@ -106,7 +107,7 @@ const createGalleryMarkup = galleryItems => {
     })
     .join('');
 };
-
+let data = {};
 async function loadMoreImages(searchQuery) {
   const images = await fetchImages(searchQuery);
   displayImages(images);
@@ -114,6 +115,16 @@ async function loadMoreImages(searchQuery) {
 }
 loadMoreButton.addEventListener('click', async function () {
   const searchQuery = searchForm.elements.searchQuery.value;
+  try{
   await loadMoreImages(searchQuery);
+    if (letdata.page === data.total_pages) {
+      Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
+    } else {
+      return images;
+    }
+    } catch (error) {
+      console.error('An error occurred while fetching images:', error);
+      return [];
+    }
 });
 
