@@ -67,6 +67,7 @@ box-shadow: inset 2px 2px 3px #fff, inset -3px -3px 7px #fff;
 .input{
 width: 400px;
 height: 30px;
+border-radius: 20px;
     }
 
     .submit{
@@ -78,7 +79,6 @@ height: 30px;
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    font-weight: 600;
     display: flex;
     box-shadow: 0 0 #fff, 5px 5px 20px #e9e6dc;
     font-family: 'Montserat';

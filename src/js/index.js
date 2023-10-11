@@ -11,7 +11,7 @@ const BASE_URL = 'https://pixabay.com/api/';
 const ref = {
   select: document.querySelector('.target-js'),   
   loadMoreButton: document.querySelector('.load-more'),
-     endMessage: document.getElementById('end-message'),
+
 }
 
 const { select,loadMoreButton,endMessage } = ref;
