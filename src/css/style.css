@@ -68,6 +68,7 @@ box-shadow: inset 2px 2px 3px #fff, inset -3px -3px 7px #fff;
 width: 400px;
 height: 30px;
 border-radius: 20px;
+text-align: center;
     }
 
     .submit{
