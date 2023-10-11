@@ -14,7 +14,7 @@ const ref = {
 
 }
 
-const { select, loadMoreButton } = ref;
+const { select,loadMoreButton } = ref;
 
 let searchForm = document.querySelector('.search-form');
 let galleryList = document.querySelector('.gallery'); 
@@ -110,12 +110,10 @@ const createGalleryMarkup = galleryItems => {
 async function loadMoreImages(searchQuery) {
   const images = await fetchImages(searchQuery);
   displayImages(images);
-  loadMoreButton.classList.add('is-hidden');
-
+  loadMoreButton.style.display = 'block'; 
 }
 loadMoreButton.addEventListener('click', async function () {
   const searchQuery = searchForm.elements.searchQuery.value;
-   loadMoreButton.classList.remove('is-hidden');
+  await loadMoreImages(searchQuery);
 });
 
-loadMoreButton.style.display = 'none';
