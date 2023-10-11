@@ -112,15 +112,15 @@ async function loadMoreImages(searchQuery) {
   const images = await fetchImages(searchQuery);
   displayImages(images);
   loadMoreButton.style.display = 'block'; 
+   data.page++;
 }
 loadMoreButton.addEventListener('click', async function () {
   const searchQuery = searchForm.elements.searchQuery.value;
   try{
   await loadMoreImages(searchQuery);
-    if (letdata.page === data.total_pages) {
+    if (data.page === data.total_pages) {
       Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
-    } else {
-      return images;
+    
     }
     } catch (error) {
       console.error('An error occurred while fetching images:', error);
