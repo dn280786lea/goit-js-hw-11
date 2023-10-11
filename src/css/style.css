@@ -3,6 +3,7 @@ body {
     font-family: 'Montserat';
         font-style: normal;
         background-color: blanchedalmond;
+        text-decoration: none;
 }
 
 
@@ -70,6 +71,7 @@ height: 30px;
 border-radius: 20px;
 text-align: center;
 font-weight: 700;
+font-size: 16px;
 font-family: 'Montserat';
     }
 
@@ -90,5 +92,17 @@ font-family: 'Montserat';
     }
 
   .load-more {
-    display: none;
+    width: 120px;
+        height: 30px;
+        cursor: pointer;
+        border: none;
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        display: flex;
+        box-shadow: 0 0 #fff, 5px 5px 20px #e9e6dc;
+        font-family: 'Montserat';
+        color: black;
+        font-weight: 700;
         }

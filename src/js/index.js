@@ -114,5 +114,6 @@ searchForm.addEventListener('submit', async function (e) {
   const images = await fetchImages(searchQuery);
   displayImages(images);
 });
+loadMoreButton.addEventListener('click', onClickLoadMore);
 
 
