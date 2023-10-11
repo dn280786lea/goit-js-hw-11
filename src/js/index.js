@@ -115,5 +115,8 @@ searchForm.addEventListener('submit', async function (e) {
   displayImages(images);
 });
 loadMoreButton.addEventListener('click', onClickLoadMore);
+function onClickLoadMore() {
+    page += 1;
+};
 
 
