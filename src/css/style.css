@@ -108,3 +108,7 @@ font-family: 'Montserat';
         font-weight: 700;
         align-items:center;
         }
+
+                .is-hidden {
+                    display: none;
+                }
