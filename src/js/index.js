@@ -107,17 +107,13 @@ const createGalleryMarkup = galleryItems => {
     .join('');
 };
 
-searchForm.addEventListener('submit', async function (e) {
-  e.preventDefault();
-  const searchQuery = searchForm.elements.searchQuery.value;
-  clearGallery();
+async function loadMoreImages(searchQuery) {
   const images = await fetchImages(searchQuery);
   displayImages(images);
+  loadMoreButton.style.display = 'block'; 
+}
+loadMoreButton.addEventListener('click', async function () {
+  const searchQuery = searchForm.elements.searchQuery.value;
+  await loadMoreImages(searchQuery);
 });
-loadMoreButton.addEventListener('click', onClickLoadMore);
-function onClickLoadMore() {
-  currentPage += 1;
-  loadMoreImages(searchForm.elements.searchQuery.value);
-};
-
 
