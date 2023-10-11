@@ -14,7 +14,7 @@ const ref = {
 
 }
 
-const { select,loadMoreButton,endMessage } = ref;
+const { select,loadMoreButton } = ref;
 
 let searchForm = document.querySelector('.search-form');
 let galleryList = document.querySelector('.gallery'); 
@@ -116,7 +116,8 @@ searchForm.addEventListener('submit', async function (e) {
 });
 loadMoreButton.addEventListener('click', onClickLoadMore);
 function onClickLoadMore() {
-    page += 1;
+  currentPage += 1;
+  loadMoreImages(searchForm.elements.searchQuery.value);
 };
 
 
