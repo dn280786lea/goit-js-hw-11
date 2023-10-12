@@ -75,6 +75,7 @@ text-align: center;
 font-weight: 700;
 font-size: 16px;
 font-family: 'Montserat';
+border:2px solid rosybrown;
     }
 
     .submit{
@@ -100,7 +101,7 @@ font-family: 'Montserat';
     width: 120px;
         height: 30px;
         cursor: pointer;
-        border: none;
+        border: 2px solid rosybrown;
         border-radius: 20px;
         justify-content: center;
         align-items: center;
@@ -116,4 +117,4 @@ font-family: 'Montserat';
 
         .is-hidden {
         display: none;
-                }
+        }
