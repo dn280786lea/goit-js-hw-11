@@ -108,7 +108,7 @@ const createGalleryMarkup = galleryItems => {
     .join('');
 };
 let data = {};
-async function loadMoreImages(searchQuery) {
+async function pictMore(searchQuery) {
   const images = await fetchImages(searchQuery);
   displayImages(images);
   loadMoreButton.style.display = 'block'; 
@@ -128,11 +128,11 @@ loadMoreButton.addEventListener('click', async function () {
     }
 });
 
-//меньше 40 картинок
+
 async function loadMoreImages(searchQuery) {
   const images = await fetchImages(searchQuery);
   displayImages(images);
-  const imagesCount = galleryList.querySelectorAll('.gallery__item').length;
+const imagesCount = galleryList.querySelectorAll('.gallery__item').length;
   if (imagesCount < 40) {
     loadMoreButton.style.display = 'none';
   } else {
