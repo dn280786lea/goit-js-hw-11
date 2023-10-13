@@ -93,15 +93,19 @@ const createGalleryMarkup = galleryItems => {
     .map(({ previewURL, largeImageURL, tags, likes, views, comments, downloads }) => {
       const altText = formatAltText(likes, views, comments, downloads);
       return `
+
         <div class="gallery__item">
+          <div class="gallery__sort">
           <a class="gallery__link" href="${largeImageURL}" target="_blank">
             <img
               class="gallery__image"
               src="${previewURL}"
               data-source="${largeImageURL}"
              loading="lazy"/>
-              <p class="image_description">${altText}</p>
+  
+              <p class="image_description">${altText}</p>      
           </a>
+          <div/>
         </div>
       `;
     })
