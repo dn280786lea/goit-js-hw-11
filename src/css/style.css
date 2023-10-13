@@ -1,11 +1,9 @@
-
 body {
-        font-family: 'Montserat';
+font-family: 'Montserat';
         font-style: normal;
         background-color: blanchedalmond;
         text-decoration: none;
 }
-
 
 .container {
         display: flex;
@@ -16,23 +14,30 @@ body {
         padding-left: 15px;
 
 }
-
 .gallery {
         display: flex;
         gap: 12px;
-        flex-wrap: wrap;
-        
-        
+        flex-wrap: wrap;}
 
-}
-
-.gallery__item {
+.gallery__link {
         width: calc((100% - 64px) / 4);
         border: 2px rosybrown;
-        height: 400px;
+        
+
 }
 
-.search-form{
+.gallery__image {
+        width: 450px;
+        object-fit: cover;
+        height: auto;
+        overflow: hidden;
+        border: 10px solid rosybrown;
+        
+}
+.gallery__item{
+        height:400px ;
+}
+.search-form {
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
@@ -43,27 +48,20 @@ body {
         padding: 20px 0;
         top: 0;
         left: 0;
-        box-shadow: inset 2px 2px 3px #fff, inset -3px -3px 7px #fff;
+        box-shadow: inset 2px 2px 3px #fff, inset -3px -3px 7px #fff;}
 
 
-
-}
-.image_description{
+.image_description {
         font-family: 'Montserat';
         color: black;
         font-weight: 700;
         text-decoration: none;
         text-align: center;
         font-size: 16px;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px 30px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        display: flex;
-}
+     
+                }
 
-.input{
+.input {
         width: 400px;
         height: 30px;
         border-radius: 20px;
@@ -71,10 +69,12 @@ body {
         font-weight: 700;
         font-size: 16px;
         font-family: 'Montserat';
-        border:2px solid rosybrown;
-    }
+        border: 2px solid rosybrown;
+   
+                                }
 
-    .submit{
+
+.submit {
         width: 120px;
         height: 30px;
         cursor: pointer;
@@ -89,10 +89,10 @@ body {
         color: black;
         font-weight: 700;
         border: 2px solid rosybrown;
-  
-    }
+                                                                
+ }
 
-  .load-more {
+    .load-more {
         display: none;
         width: 120px;
         height: 30px;
@@ -107,31 +107,10 @@ body {
         font-family: 'Montserat';
         color: black;
         font-weight: 700;
-        align-items:center;
+        align-items: center;
         display: none;
         }
-
-        .is-hidden {
+                                                                
+ .is-hidden {
         display: none;
-        }
-
-        .gallery__sort{
-
-        display: flex;
-        align-items:center;
-        padding: 15px 15px;
-        height: 320px;
-   
-        }
-        .gallery__image {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        border: 10px solid rosybrown;
-    }
-
-        .gallery__link {
-        display: flex;
-        flex-direction: column;
-        }
-
+ }
