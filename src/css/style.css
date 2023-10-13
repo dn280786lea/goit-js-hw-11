@@ -58,8 +58,8 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px 30px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
         display: flex;
 }
 
@@ -116,7 +116,7 @@ body {
         }
 
         .gallery__sort{
-      
+
         display: flex;
         align-items:center;
         padding: 15px 15px;
@@ -125,8 +125,8 @@ body {
         }
         .gallery__image {
         height: 100%;
-            width: 100%;
-            object-fit: cover;
+        width: 100%;
+        object-fit: cover;
         border: 10px solid rosybrown;
     }
 
